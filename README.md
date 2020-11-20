@@ -4,7 +4,7 @@ This project allows you to provide a read-only mirror for your GitHub issues whi
 
 * Data ownership
 * Better for SEO in case not all of your GitHub issues are indexed by Google
-* In case GitHub is down you can still access your issues
+* In case you get DMCA'd you can still access your issues
 
 Try it, it's easy to setup! No database needed
 
