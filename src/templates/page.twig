@@ -26,7 +26,7 @@
         <div class="container">
             <div class="page-header">
                 <h1>{{ projectName }} Issues
-                    <small>Page {{ currentPage }}</small>
+                    <small>{{ "Page " }}{{ currentPage }}</small>
                 </h1>
             </div>
         </div>
@@ -44,7 +44,7 @@
                                 <small>#{{ issue.number }}</small>
                             </h4>
                             <small>
-                                opened by @{{ issue.user.login }} on {{ issue.created_at|date }}
+                                {{ "opened by @" }}{{ issue.user.login }}{{ " on " }}{{ issue.created_at|date }}
                                 {% if issue.state == 'closed' %}
                                     <span class="badge badge-secondary">closed</span>
                                 {% endif %}
