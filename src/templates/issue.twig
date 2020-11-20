@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block title %}
-    <title>{{ projectName }} {{ pull_request ? "Pull Request" : "Issue" }} #{{ number }} - {{ title }}</title>
+    <title>{{ projectName }}{{ pull_request ? " Pull Request" : " Issue" }} #{{ number }}{{ " - " }}{{ title }}</title>
 {% endblock %}
 
 {% block content %}
