@@ -10,7 +10,7 @@
         <link rel="next" href="{{ path_for('page', [], { 'page': nextPage }) }}"/>
     {% endif %}
 
-    <link rel="canonical" href="https://github.com/matomo-org/matomo/issues/" />
+    <link rel="canonical" href="https://github.com/{{ githubOrganization|e('url') }}/{{ githubRepository|e('url') }}/issues" />
 {% endblock %}
 
 {% block content %}

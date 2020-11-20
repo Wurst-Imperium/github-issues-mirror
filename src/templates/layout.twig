@@ -7,7 +7,7 @@
     <link href="/css/style.css" rel="stylesheet">
 
     {% block head %}
-        <link rel="canonical" href="https://github.com/matomo-org/matomo/issues/" />
+        <link rel="canonical" href="https://github.com/{{ githubOrganization|e('url') }}/{{ githubRepository|e('url') }}/issues" />
     {% endblock %}
 
     {% block title %}

@@ -2,7 +2,7 @@
 {% import "macros.twig" as macro %}
 
 {% block head %}
-    <link rel="canonical" href="https://github.com/matomo-org/matomo/{{ pull_request ? "pulls" : "issues" }}/{{ number|e('html_attr') }}" />
+    <link rel="canonical" href="{{ html_url }}" />
 {% endblock %}
 
 {% block title %}
