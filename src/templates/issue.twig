@@ -28,7 +28,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                {{ macro.user(user) }} opened this {{ pull_request ? "Pull Request" : "Issue" }} on {{ created_at|date }}
+                {{ macro.user(user) }}{{ " opened this " }}{{ pull_request ? "Pull Request" : "Issue" }}{{ " on " }}{{ created_at|date }}
                 {% if author_association != "NONE" %}
                     <span class="authorAssociation">{{ author_association | capitalize }}</span>
                 {% endif %}
@@ -41,8 +41,7 @@
         {% if comments|length %}
             {% for comment in comments %}
                 <div class="card">
-                    <div class="card-header">{{ macro.user(comment.user) }} commented
-                        on {{ comment.created_at|date }}
+                    <div class="card-header">{{ macro.user(comment.user) }}{{ " commented on " }}{{ comment.created_at|date }}
                         {% if comment.author_association != "NONE" %}
                             <span class="authorAssociation">{{ comment.author_association | capitalize }}</span>
                         {% endif %}
@@ -57,7 +56,7 @@
         {% if state == 'closed' %}
             <div class="card">
                 <div class="card-header">
-                    This {{ pull_request ? "Pull Request" : "Issue" }} was closed on {{ closed_at|date }}
+                    {{ "This " }}{{ pull_request ? "Pull Request" : "Issue" }}{{ " was closed on " }}{{ closed_at|date }}
                 </div>
             </div>
         {% endif %}
